@@ -8,6 +8,7 @@ import { RepoSearchComponent } from './repo-search/repo-search.component';
 import { GitSearchService } from './gitSearch-service/git-search.service';
 import { ProfileComponent } from './profile/profile.component';
 import { GitPipe } from './git.pipe';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { GitPipe } from './git.pipe';
     GitSearchComponent,
     RepoSearchComponent,
     ProfileComponent,
-    GitPipe
+    GitPipe,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
