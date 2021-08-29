@@ -1,0 +1,38 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+h1{
+    font-size: 190%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 50%;
+    
+}
+.bar{
+    height: 100px;
+}
+
+ul{
+  margin: 0%;  
+
+}
+ul li{
+    display: block;
+list-style: none;
+display: inline-block;
+line-height: 100px;
+
+
+
+}
+ul li a {
+text-decoration: none;
+font-size: 120%;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: blanchedalmond;
+padding: 0 20px;
+
+}
+ul li a:hover{
+    color: cadetblue;
+}
