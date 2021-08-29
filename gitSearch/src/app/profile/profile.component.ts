@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GitSearchService } from '../gitSearch-service/git-search.service';
-import  { User} from '../user';
+import  { User} from 'src/user';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -12,10 +12,10 @@ export class ProfileComponent implements OnInit {
   user: User;
 
 constructor(private userService:GitSearchService) {
-    this.userService.getMyUser();
+    this.userService.getUser();
     this.user = this.userService.user;
 
-    this.userService.getMyRepos();
+    this.userService.getRepos();
     this.repos = this.userService.reposArray;
 }
 
