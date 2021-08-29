@@ -26,11 +26,11 @@ export class GitSearchService {
         let promise = new Promise<void> ((resolve, reject) => {
             this.http.get(environment.urlApikey + this.endpoint + "Maureen-1998DEV" ).toPromise().then(
                 res => {
-                    this.user.userName = res.json().name;
-                    this.user.login = res.json().login;
-                    this.user.profile = res.json().profile;
-                    this.user.links = res.json().html_url;
-                    this.user.avatar = res.json().avatar_url;
+                    this.user.userName = res.userName;
+                    this.user.login = res.login;
+                    this.user.profile = res.profile;
+                    this.user.links = res.html_url;
+                    this.user.avatar = res.avatar_url;
                     resolve();
                 }, error => {
                     reject(error);
@@ -44,11 +44,11 @@ export class GitSearchService {
         let promise = new Promise<void> ((resolve, reject) => {
             this.http.get(environment.urlApikey + this.endpoint + this.userName + "?client_id=").toPromise().then(
                 res => {
-                    this.user.userName = res.json().userName;
-                    this.user.login = res.json().login;
-                    this.user.profile = res.json().profile;
-                    this.user.links = res.json().html_url;
-                    this.user.avatar = res.json().avatar_url;
+                    this.user.userName = res.userName;
+                    this.user.login = res.login;
+                    this.user.profile = res.profile;
+                    this.user.links = res.html_url;
+                    this.user.avatar = res.avatar_url;
                     resolve();
                 }, error => {
                     reject(error);
@@ -62,7 +62,7 @@ export class GitSearchService {
         let promise = new Promise<void>((resolve, reject) => {
             this.http.get(environment.urlApikey + this.endpoint + "Maureen-1998DEV" + "/repos?client_id=" ).toPromise().then(
                 res => {
-                    for (let repo of res.json()){
+                    for (let repo of new Repository()){
                         this.repository.Reponame = repo.name;
                         this.repository.description = repo.description;
                         this.repository.repolinks = repo.html_url;
