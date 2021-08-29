@@ -12,6 +12,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ReposComponent } from './repos/repos.component';
 import { SearchComponent } from './search/search.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { SearchComponent } from './search/search.component';
     GitPipe,
     NotFoundComponent,
     ReposComponent,
-    SearchComponent
+    SearchComponent,
+  
   ],
   imports: [
     BrowserModule,

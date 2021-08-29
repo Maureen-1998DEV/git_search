@@ -1,28 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import {  GitSearchService} from '../gitSearch-service/git-search.service';
-import { User} from 'src/user';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css'],
+  styleUrls: ['./search.component.css']
 })
-export class GitSearchComponent implements OnInit {
-    repos!: any[];
-    username!: string;
-    user!: User;
+export class SearchComponent implements OnInit {
 
-    constructor(private userService:GitSearchService) {
+  constructor() { }
 
-          this.userService.updateProfile();
-          this.user = this.userService.user;
-
-
-    }
-      
-           
-  
-  ngOnInit():void{
+  ngOnInit(): void {
   }
-}
 
+}
