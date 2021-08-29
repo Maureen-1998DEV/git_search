@@ -12,10 +12,10 @@ export class ProfileComponent implements OnInit {
   user: User;
 
 constructor(private userService:GitSearchService) {
-    this.userService.getUser();
+    this.userService.updateProfile();
     this.user = this.userService.user;
 
-    this.userService.getRepos();
+    this.userService.updateSearchTerm();
     this.repos = this.userService.reposArray;
 }
 

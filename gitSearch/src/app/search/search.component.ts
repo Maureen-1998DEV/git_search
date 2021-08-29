@@ -5,29 +5,24 @@ import { User} from 'src/user';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  providers: [GitSearchService],
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css'],
 })
 export class GitSearchComponent implements OnInit {
     repos!: any[];
     username!: string;
     user!: User;
 
-    constructor(private userService:GitSearchService) {}
+    constructor(private userService:GitSearchService) {
 
-    
-  
-      searchUser(){
-          this.userService.updateProfile(this.username);
-          this.userService.getUser();
+          this.userService.updateProfile();
           this.user = this.userService.user;
 
 
-
-      }
+    }
+      
            
   
-  ngOnInit() {
+  ngOnInit():void{
   }
 }
 

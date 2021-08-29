@@ -5,21 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 import { AppComponent } from './app.component';
-import { GitSearchComponent } from './git-search/git-search.component';
 import { GitSearchService } from './gitSearch-service/git-search.service';
 import { ProfileComponent } from './profile/profile.component';
-import { GitPipe } from './git.pipe';
+import { GitPipe } from 'src/app/git.pipe';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ReposComponent } from './repos/repos.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GitSearchComponent,
     ProfileComponent,
     GitPipe,
     NotFoundComponent,
-    ReposComponent
+    ReposComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

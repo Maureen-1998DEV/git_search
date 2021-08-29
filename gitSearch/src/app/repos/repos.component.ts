@@ -4,8 +4,7 @@ import {  GitSearchService} from '../gitSearch-service/git-search.service';
 @Component({
   selector: 'app-repos',
   templateUrl: './repos.component.html',
-  providers:[GitSearchService],
-  styleUrls: ['./repos.component.css']
+  styleUrls: ['./repos.component.css'],
 })
 export class ReposComponent implements OnInit {
 
@@ -15,8 +14,7 @@ export class ReposComponent implements OnInit {
     constructor(private searchApi:GitSearchService) { }
 
     findRepos () {
-        this.searchApi.updateSearchTerm(this.search);
-        this.searchApi.searchRepos();
+        this.searchApi.updateSearchTerm();
         this.repo = this.searchApi.reposArray;
     }
   ngOnInit() {
