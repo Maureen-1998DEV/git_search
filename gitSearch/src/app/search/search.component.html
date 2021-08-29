@@ -1,1 +1,26 @@
-<p>search works!</p>
+<div class="row" *ngIf="user">
+    <div class="row">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="{{user.avatar_url}}" class="img-rounded" alt="User Image" height="250">
+            </div>
+            <div class="col-sm-9">
+                <h1 class="details">{{user.userName}}</h1>
+                <p class="details"> {{user.login}}</p>
+                <p class="details">{{user.Bio}}</p>
+                <p class="details"><a href="{{user.gitlinks}}" class="btn btn-success">View on github</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <h3>Repositories</h3>
+            <div class="row" *ngFor="let repo of repos">
+                <div class="col-sm-12">
+                    <h4>{{repo.name|git}}</h4>
+                    <p>{{repo.description}}</p>
+                    <a href="{{repo.repolinks}}" class="btn btn-sm btn-info">View this project</a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
