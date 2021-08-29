@@ -11,6 +11,7 @@ import { GitPipe } from 'src/app/git.pipe';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ReposComponent } from './repos/repos.component';
 import { SearchComponent } from './search/search.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { SearchComponent } from './search/search.component';
     NotFoundComponent,
     ReposComponent,
     SearchComponent,
+    NavbarComponent,
 
   
   ],
