@@ -14,6 +14,8 @@ import { ReposComponent } from './repos/repos.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { GitPipe } from './git.pipe';
 import { GitService } from './git.service';
+import { ColorDirective } from './color.directive';
+import { BoldenPipe } from './bolden.pipe';
 
 const routes:Routes=[
   {path:"profile",component:ProfileComponent},
@@ -30,7 +32,9 @@ const routes:Routes=[
     SearchComponent,
     ReposComponent,
     NotFoundComponent,
-    GitPipe
+    GitPipe,
+    ColorDirective,
+    BoldenPipe
   ],
   imports: [
     BrowserModule,
