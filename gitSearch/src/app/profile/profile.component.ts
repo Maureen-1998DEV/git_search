@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GitService } from '../git.service';
 
 @Component({
   selector: 'app-profile',
