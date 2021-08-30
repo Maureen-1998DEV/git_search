@@ -5,6 +5,9 @@
 export const environment = {
   production: false,
   urlApiKey:"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",
+  clientid:'266c65f4d4367d6a2c35',
+  clientsecrets:'0bcd413fd3a43a72dfa00bbd7714152f040b4729' 
+
 };
 
 /*

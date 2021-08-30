@@ -1,9 +1,10 @@
+<div  >
 <div class="row">
     <div class="col-md-12 p-4">
         <form (ngSubmit)='findRepos()' >
             <div class="form-group">
                 <div class="col-md-6 p-3">
-                <input type="text" class="form-control" placeholder="Enter a github Repository"  name="username">
+                <input type="text" class="form-control" placeholder="Enter a github Repository" [(ngModel)] = "gitUser" name="username">
                 </div>
                 
                 <div class="col-md-6 ">
@@ -12,19 +13,19 @@
             </div>
         </form>
     </div>
-
+</div>
 </div>
 <div class="row" >
-    <div class="row">
+    <div *ngIf="let repo ">
         <div class="row">
             <div class="col-sm-4">
-                <img src="" class="img-rounded" alt="User Image" height="250">
+                <img src="users.Avatar" class="img-rounded" alt="User Image" height="250">
             </div>
             <div class="col-sm-8">
                 <h1 class="details"></h1>
                 <p class="details"></p>
                 <p class="details"></p>
-                <p class="details"><a href="" class="btn btn-success">View on github</a></p>
+                <p class="details"><a href="{{users.gitlinks}}" class="btn btn-success">View on github</a></p>
             </div>
         </div>
         <div class="row">
@@ -33,7 +34,7 @@
                 <div class="col-sm-12">
                     <p></p>
                     <p></p>
-                    <a href="" class="btn btn-sm btn-info">View this project</a>
+                    <a href="{{repos.repolinks}}" class="btn btn-sm btn-info">View this project</a>
                     <hr>
                 </div>
             </div>

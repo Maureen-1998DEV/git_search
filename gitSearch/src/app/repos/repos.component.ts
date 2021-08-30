@@ -7,15 +7,18 @@ import { GitService } from '../git.service';
 })
 export class ReposComponent implements OnInit {
 
-  constructor() { }
+  repos:any[];
+    gitUser:string;
 
+    constructor(private searchApi:GitService) { }
 
+    findRepos () {
+        this.searchApi.SearchAccess(this.gitUser);
+        this.searchApi.repoSearch();
+        this.repos = this.searchApi.repoArray;
+    }
 
-  findRepos(){
-
-  }
-
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

@@ -1,10 +1,9 @@
 <div class="row">
     <div class="col-md-12">
-    
-        <form (ngSubmit)='findUser()' >
+     <form (ngSubmit)='findUser()' >
             <div class="form-group">
                 <div class="col-md-6 p-4">
-                <input type="text" class="form-control" placeholder="Enter a github username"  name="username">
+                <input type="text" class="form-control" placeholder="Enter a github username"[(ngModel)] = "username"  name="username">
                 </div>
                 <br>
                 <div class="col-md-6 p-3">
@@ -16,20 +15,20 @@
 
 </div>
 <div class="row" >
-    <div class="row">
+    <div *ngIf=user>
         <div class="row">
             <div class="col-sm-4">
-                <img src="" class="img-rounded" alt="User Image" height="250">
+                <img src="{{users.Avatar}}" class="img-rounded" alt="User Image" height="250">
             </div>
             <div class="col-sm-8">
-                <h1 class="details"></h1>
-                <p class="details"></p>
-                <p class="details"></p>
-                <p class="details"><a href="" class="btn btn-primary">View on github</a></p>
+                <h1 class="details">{{users.username}}</h1>
+                <p class="details">{{users.login}}</p>
+                <p class="details">{{users.Bio</p>
+                <p class="details"><a href="{{users.gitlink}}" class="btn btn-primary">View on github</a></p>
             </div>
         </div>
         <div class="row">
-            <h3>Repositories</h3>
+            <h2>Repositories</h2>
             <div class="row" >
                 <div class="col-sm-12">
                     <p></p>
